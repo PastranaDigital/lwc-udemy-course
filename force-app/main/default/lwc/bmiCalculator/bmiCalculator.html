@@ -30,11 +30,11 @@
           onclick={getBMIButtonHandler}
         ></lightning-button>
         <br />
-        <template if:true={bmiCalculation}>
+        <template if:true={bmiData.result}>
           <br />
           <p>
             Your BMI is:
-            <span class={alertDivClass}><b> {bmiCalculation}</b></span>
+            <span class={alertDivClass}><b> {bmiData.result}</b></span>
           </p>
         </template>
       </div>
