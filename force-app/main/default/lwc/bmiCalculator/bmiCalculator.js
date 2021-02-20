@@ -11,7 +11,7 @@ export default class BmiCalculator extends LightningElement {
   alertDivClass;
 
   getBMIButtonHandler() {
-    if (this.bmiData.weight != 0 && this.bmiData.height != 0) {
+    if (this.bmiData.weight !== 0 && this.bmiData.height !== 0) {
       this.bmiData.result = (
         (703 * this.bmiData.weight) /
         (this.bmiData.height * this.bmiData.height)

@@ -1,0 +1,25 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 02-20-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   02-20-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-card title="Meeting Rooms" icon-name="standard:address">
+    <ul>
+      <template for:each={meetingRoomsInfo} for:item="room">
+        <li key={room.roomName} style="padding: 10px">
+          <!-- by including show-room-info it is set to true -->
+          <c-meeting-room
+            meeting-room-info={room}
+            show-room-info
+          ></c-meeting-room>
+        </li>
+      </template>
+    </ul>
+  </lightning-card>
+</template>
