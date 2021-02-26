@@ -20,6 +20,7 @@ export default class PublicMethodChild extends LightningElement {
       this.value = selectedCheckbox.value;
       return "Successfully checked";
     }
+    this.value = []; // clears out the default checkboxes
     return "No checkbox found";
   }
 }
