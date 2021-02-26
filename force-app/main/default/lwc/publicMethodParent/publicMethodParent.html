@@ -1,0 +1,29 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 02-26-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   02-26-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <div class="container">
+    <lightning-card title="Call Methods on Child Component">
+      <div class="slds-p-around_medium">
+        <lightning-input
+          value={value}
+          label="Checkbox Value"
+          onchange={onInputChangeHandler}
+        ></lightning-input>
+        <lightning-button
+          label="Select Checkbox"
+          onclick={checkboxSelectHandler}
+        ></lightning-button>
+        <br /><br />
+        <c-public-method-child></c-public-method-child>
+      </div>
+    </lightning-card>
+  </div>
+</template>
