@@ -2,7 +2,7 @@
   @description       : 
   @author            : Omar Pastrana
   @group             : 
-  @last modified on  : 02-20-2021
+  @last modified on  : 02-26-2021
   @last modified by  : Omar Pastrana
   Modifications Log 
   Ver   Date         Author          Modification
@@ -15,10 +15,18 @@
         <template for:each={meetingRoomsInfo} for:item="room">
           <li key={room.roomName} style="padding: 10px">
             <!-- by including show-room-info it is set to true -->
-            <c-meeting-room
-              meeting-room-info={room}
-              show-room-info
-            ></c-meeting-room>
+            <c-meeting-room show-room-info>
+              <lightning-tile
+                label={room.roomName}
+                href="/path/to/somewhere"
+                slot="roomInfo"
+              >
+                <p class="slds-truncate" title={room.roomCapacity}>
+                  Room Capacity: {room.roomCapacity}
+                </p>
+              </lightning-tile>
+              <div>Additional unnamed slot</div>
+            </c-meeting-room>
           </li>
         </template>
       </ul>
