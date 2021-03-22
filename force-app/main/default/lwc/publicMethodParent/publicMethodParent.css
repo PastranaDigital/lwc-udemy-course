@@ -1,3 +1,7 @@
 .container {
   width: 640px;
 }
+
+div {
+  color: red;
+}
