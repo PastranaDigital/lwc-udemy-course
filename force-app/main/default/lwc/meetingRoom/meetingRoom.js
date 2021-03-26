@@ -10,9 +10,11 @@ export default class MeetingRoom extends LightningElement {
 
   @api showRoomInfo = false; // must be set to false by default since it is a child property
 
+  // set bubbles property to true, to allow you event to bubble up to parent components
   tileClickHandler() {
     const tileClicked = new CustomEvent("tileclick", {
-      detail: this.meetingRoomInfo
+      detail: this.meetingRoomInfo,
+      bubbles: true
     });
     this.dispatchEvent(tileClicked);
     //console.log("tile clicked " + this.meetingRoomInfo.roomName);
