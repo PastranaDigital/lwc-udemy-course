@@ -1,4 +1,8 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement, api, wire } from "lwc";
+// this will allow independent components to communicate
+import { fireEvent } from "c/pubsub";
+// this is needed for the fireEvent parameters
+import { CurrentPageReference } from "lightning/navigation";
 
 export default class MeetingRoom extends LightningElement {
   @api meetingRoomInfo = { roomName: "default", roomCapacity: "20" }; // public property coming in from parent component
@@ -10,6 +14,8 @@ export default class MeetingRoom extends LightningElement {
 
   @api showRoomInfo = false; // must be set to false by default since it is a child property
 
+  @wire(CurrentPageReference) pageReference;
+
   // set bubbles property to true, to allow you event to bubble up to parent components
   tileClickHandler() {
     const tileClicked = new CustomEvent("tileclick", {
@@ -18,5 +24,8 @@ export default class MeetingRoom extends LightningElement {
     });
     this.dispatchEvent(tileClicked);
     //console.log("tile clicked " + this.meetingRoomInfo.roomName);
+
+    // fireEvent(pageRef, evenetName, payload)
+    fireEvent(this.pageReference, "pubsubtileclick", this.meetingRoomInfo);
   }
 }
