@@ -2,7 +2,7 @@
   @description       : 
   @author            : Omar Pastrana
   @group             : 
-  @last modified on  : 02-26-2021
+  @last modified on  : 03-25-2021
   @last modified by  : Omar Pastrana
   Modifications Log 
   Ver   Date         Author          Modification
@@ -10,7 +10,7 @@
 -->
 <template>
   <template if:true={showRoomInfo}>
-    <div class="slds-p-around_medium lgc-bg">
+    <div class="slds-p-around_medium lgc-bg" onclick={tileClickHandler}>
       <!--
       <lightning-tile
         label={meetingRoomInfo.roomName}

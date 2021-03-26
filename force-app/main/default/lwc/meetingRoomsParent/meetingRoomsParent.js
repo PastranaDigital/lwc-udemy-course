@@ -1,6 +1,8 @@
 import { LightningElement } from "lwc";
 
 export default class MeetingRooms extends LightningElement {
+  selectedMeetingRoom;
+
   meetingRoomsInfo = [
     { roomName: "A203", roomCapacity: "12" },
     { roomName: "A204", roomCapacity: "20" },
@@ -10,4 +12,9 @@ export default class MeetingRooms extends LightningElement {
     { roomName: "A208", roomCapacity: "12" },
     { roomName: "A209", roomCapacity: "26" }
   ];
+
+  onTileSelectedTileHandler(event) {
+    const meetingRoomInfo = event.detail;
+    this.selectedMeetingRoom = meetingRoomInfo.roomName;
+  }
 }
