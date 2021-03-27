@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 03-27-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   03-27-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-card title="Account Record Form" icon-name="standard:account">
+    <div class="slds-p-around_medium">
+      <!-- 
+                record-id = if blank then it will make a new record
+                columns = 1 or 2
+                mode = readonly / edit / view 
+                layout-type = Full or Compact
+                fields = what exactly you want to display
+            -->
+      <lightning-record-form
+        object-api-name="Account"
+        record-id={recordId}
+        columns="2"
+        mode="edit"
+        fields={fieldsArray}
+        onsuccess={successHandler}
+      ></lightning-record-form>
+    </div>
+  </lightning-card>
+</template>
