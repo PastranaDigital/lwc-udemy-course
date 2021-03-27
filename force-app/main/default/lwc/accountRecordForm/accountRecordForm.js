@@ -1,4 +1,8 @@
-import { LightningElement } from "lwc";
+import { LightningElement, wire } from "lwc";
+// this will allow independent components to communicate
+import { fireEvent } from "c/pubsub";
+// this is needed for the fireEvent parameters
+import { CurrentPageReference } from "lightning/navigation";
 
 // this established a hard reference for the Salesforce fields so if someone attempts to
 // modify or delete them, Salesforce will intercede and/or update
@@ -11,7 +15,17 @@ export default class AccountRecordForm extends LightningElement {
   // fieldsArray = ["Name", "Phone", "Website"]; // NOT hard referenced fields
   fieldsArray = [NAME_FIELD, PHONE_FIELD, WEBSITE_FIELD];
 
-  successHandler(event) {
-    this.recordId = event.detail.id;
+  @wire(CurrentPageReference) pageReference;
+
+  successHandler() {
+    console.log("successHandler");
+    const accountCreated = new CustomEvent("accountCreate");
+    console.log("before dispatchEvent");
+    this.dispatchEvent(accountCreated);
+    console.log("account created "); // + this.recordId.Name);
+
+    // fireEvent(pageRef, eventName, payload)
+    fireEvent(this.pageReference, "pubsubaccountCreate", this.fieldsArray);
+    console.log("event fired");
   }
 }

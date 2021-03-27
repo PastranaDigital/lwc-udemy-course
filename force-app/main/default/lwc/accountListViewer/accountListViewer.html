@@ -1,0 +1,37 @@
+<!-- add custom labels for totals https://www.sfdcpoint.com/salesforce/custom-labels-in-lightning-web-component-lwc/ -->
+<!-- aura component - https://salesforce.stackexchange.com/questions/274407/change-browser-title-in-lightning-experience -->
+<template>
+  <lightning-card title="All Accounts" icon-name="standard:contact_list">
+    <div class="slds-p-around_small">
+      <lightning-datatable
+        columns={columns}
+        data={data}
+        key-field="id"
+        hide-checkbox-column="true"
+        show-row-number-column="true"
+      ></lightning-datatable>
+    </div>
+    <!--<div class="slds-p-around_small">
+      <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+        <tbody>
+          <template class="topRow">
+            <tr>
+              <td class="topRow"><b>Account Name</b></td>
+              <td class="topRow"><b>Account Phone</b></td>
+              <td class="topRow"><b>Website</b></td>
+            </tr>
+          </template>
+          <template for:each={ACCOUNT.data} for:item="account">
+            <tr key={account.Id}>
+              <td>{account.Name}</td>
+              <td>{account.Phone}</td>
+              <td>{account.Website}</td>
+            </tr>
+          </template>
+        </tbody>
+      </table>
+    </div>
+-->
+    <br />
+  </lightning-card>
+</template>
