@@ -1,6 +1,7 @@
 // https://www.salesforcecodecrack.com/2019/10/display-reference-data-in-lwc.html
 // https://developer.salesforce.com/docs/component-library/documentation/en/lwc/lwc.apex_call_imperative
 // https://salesforce.stackexchange.com/questions/251299/force-refresh-view-in-lwc
+// https://www.salesforcepoint.com/2020/08/lwc-refresh-apex-Example.html
 
 import { LightningElement, wire } from "lwc";
 import { refreshApex } from "@salesforce/apex";
@@ -33,32 +34,10 @@ const datatableColumns = [
 export default class SetListViewer extends LightningElement {
   data = [];
   columns = datatableColumns;
-  wiredAccountList = [];
+  wiredAccountList = []; // used for refreshApex
 
-  //  @wire(getAllAccountList) ACCOUNT;
   @wire(CurrentPageReference) pageRef;
-  /*
-  @wire(getAllAccountList)
-  accList({ error, data }) {
-    if (data) {
-      let currentData = [];
 
-      data.forEach((row) => {
-        let rowData = {};
-        rowData.Name = row.Name;
-        rowData.Phone = row.Phone;
-        rowData.Website = row.Website;
-        currentData.push(rowData);
-      });
-      this.data = currentData;
-      console.log("Successful getAllAccountList wire");
-    } else if (error) {
-      window.console.log(error);
-    }
-  }
-  */
-
-  // based on: https://www.salesforcepoint.com/2020/08/lwc-refresh-apex-Example.html
   @wire(getAllAccountList) accList(result) {
     this.wiredAccountList = result;
 
@@ -79,44 +58,14 @@ export default class SetListViewer extends LightningElement {
     }
   }
 
-  getAll() {
-    getAllAccountList()
-      .then((result) => {
-        let currentData = [];
-
-        result.forEach((row) => {
-          let rowData = {};
-          rowData.Name = row.Name;
-          rowData.Phone = row.Phone;
-          rowData.Website = row.Website;
-          currentData.push(rowData);
-        });
-        this.data = currentData;
-        console.log("Successful getAllAccountList");
-      })
-      .catch((error) => {
-        this.error = error;
-      });
-  }
-
-  showPayload(payload) {
-    console.log("getAll");
-    //refreshApex(this.getAll());
-    //refreshApex(this.accList);
+  refreshListViewer() {
+    console.log("inside refreshListViewer");
     refreshApex(this.wiredAccountList);
-    console.log("payload: " + payload);
-  }
-
-  connectedCallback() {
-    // registerListener(eventName, callback, thisArg)
-    //this.getAll();
-    console.log("Connected Callback in accountListViewer");
   }
 
   renderedCallback() {
     console.log("rendered Callback");
-    registerListener("pubsubaccountCreate", this.showPayload, this);
-    // this.showPayload(); THIS WAS A BAD CHOICE AND CREATED A INFINITY LOOP
+    registerListener("pubsubaccountCreate", this.refreshListViewer, this);
   }
 
   // this callback will occur at the end of the LWC lifecycle and will turn off listening
