@@ -54,11 +54,11 @@ export default class NavigationExample extends NavigationMixin(
     });
   }
 
-  openMeetingRoom() {
+  openLWCUdemyTab() {
     this[NavigationMixin.Navigate]({
       type: "standard__navItemPage",
       attributes: {
-        apiName: "Meeting_Room"
+        apiName: "LWC_Udemy" // of the specific tab
       }
     });
   }
