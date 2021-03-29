@@ -1,0 +1,34 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 03-29-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   03-29-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-card title="All Accounts" icon-name="standard:apex">
+    <ul>
+      <template if:true={responseReceived}>
+        <template for:each={accounts.data} for:item="account">
+          <!-- error when just ^^^ {accounts} -->
+          <li key={account.Id}>
+            <div class="slds-p-around_medium lgc-bg">
+              <lightning-tile label={account.Name} type="media">
+                <lightning-icon
+                  slot="media"
+                  icon-name="standard:account"
+                ></lightning-icon>
+                <p class="slds-truncate" title={account.Phone}>
+                  {account.Phone}
+                </p>
+              </lightning-tile>
+            </div>
+          </li>
+        </template>
+      </template>
+    </ul>
+  </lightning-card>
+</template>
