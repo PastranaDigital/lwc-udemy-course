@@ -8,5 +8,9 @@
         <members>*</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
+    </types>
     <version>50.0</version>
 </Package>
