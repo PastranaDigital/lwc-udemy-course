@@ -1,0 +1,32 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 04-02-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   04-02-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-layout horizontal-align="center">
+    <lightning-layout-item padding="horizontal-small">
+      <lightning-combobox
+        name="carTypes"
+        label="Car Types"
+        placeholder="All Types"
+        value={selectedValue}
+        onchange={handleCarTypeChange}
+        variant="label-hidden"
+        options={carTypes}
+      ></lightning-combobox>
+    </lightning-layout-item>
+    <lightning-layout-item padding="horizontal-small">
+      <lightning-button
+        label="New"
+        variant="brand"
+        onclick={createNewCarType}
+      ></lightning-button>
+    </lightning-layout-item>
+  </lightning-layout>
+</template>

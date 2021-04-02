@@ -23,10 +23,12 @@ sfdx force:source:deploy -x manifest/package.xml
 sfdx force:lightning:lwc:start
 sfdx force:source:pull --forceoverwrite
 https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_develop_any_org.htm
-sfdx force:source:retrieve -m PermissionSet, CustomTab, CustomApplication
+sfdx force:source:retrieve -m PermissionSet [CustomTab, CustomApplication]
 
 ## Git Lines
 
 git add .
 git commit -m 'NAME'
 git push -u origin feature/dev3
+
+git add . && git commit -m 'NAME' && git push -u origin feature/dev3
