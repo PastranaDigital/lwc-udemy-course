@@ -1,0 +1,20 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 04-03-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   04-03-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <a onclick={carSelectHandler}>
+    <div class={isCarSelected}>
+      <img src={car.Picture__c} class="car slds-align_absolute-center" />
+      <div>
+        <p class="title slds-align_absolute-center">{car.Contact__r.Name}</p>
+      </div>
+    </div>
+  </a>
+</template>

@@ -5,6 +5,7 @@ import { ShowToastEvent } from "lightning/platformShowToastEvent";
 export default class CarSearchResult extends LightningElement {
   @api carTypeId;
   cars;
+  selectedCarId;
 
   // by swapping "this" for '$' we are making this wire adapter reactive
   @wire(getCars, { carTypeId: "$carTypeId" })
@@ -30,5 +31,10 @@ export default class CarSearchResult extends LightningElement {
       return true;
     }
     return false;
+  }
+
+  carSelectHandler(event) {
+    const carId = event.detail; // we are only passing the car.Id
+    this.selectedCarId = carId;
   }
 }
