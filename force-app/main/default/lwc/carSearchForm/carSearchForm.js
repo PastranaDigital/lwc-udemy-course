@@ -10,7 +10,7 @@ export default class CarSearchForm extends NavigationMixin(LightningElement) {
   wiredCarTypes({ data, error }) {
     if (data) {
       // create first element in array
-      this.carTypes = [{ value: "", label: "All Car Types" }];
+      this.carTypes = [{ value: "", label: "All Types" }];
       // need to create an array of label and value because that is what the combobox accepts
       data.forEach((element) => {
         const carType = {};

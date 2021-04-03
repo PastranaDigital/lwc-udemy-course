@@ -1,0 +1,31 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 04-03-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   04-03-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-layout multiple-rows horizontal-align="center">
+    <template if:true={carsFound}>
+      <template for:each={cars} for:item="car">
+        <lightning-layout-item
+          key={car.Id}
+          padding="around-small"
+          size="12"
+          small-device-size="6"
+          medium-device-size="6"
+          large-device-size="6"
+        >
+          Name: {car.Name}
+        </lightning-layout-item>
+      </template>
+    </template>
+    <template if:false={carsFound}>
+      <div class="slds-align_absolute-center">Sorry, no cars were found.</div>
+    </template>
+  </lightning-layout>
+</template>
