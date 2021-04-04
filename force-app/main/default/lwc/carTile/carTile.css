@@ -1,6 +1,6 @@
 .tile {
   padding: 8px;
-  background-color: #ffffff;
+  background-color: #db6969;
   border-radius: 0.25rem;
 }
 
@@ -23,4 +23,5 @@ img.car {
   border-width: medium;
   border-radius: 4px;
   border-color: royalblue;
+  border-style: solid;
 }

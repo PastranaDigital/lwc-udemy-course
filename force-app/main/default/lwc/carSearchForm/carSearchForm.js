@@ -33,6 +33,7 @@ export default class CarSearchForm extends NavigationMixin(LightningElement) {
   }
 
   handleCarTypeChange(event) {
+    console.log("handleCarTypeChange");
     // grabs the Id from the selected option
     // the .value was set to the Id from the Apex wire method
     const carTypeId = event.detail.value;

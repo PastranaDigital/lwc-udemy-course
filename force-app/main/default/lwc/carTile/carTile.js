@@ -7,6 +7,7 @@ export default class CarTile extends LightningElement {
   carSelectHandler(event) {
     // the default action of this anchor tag will be prevented
     event.preventDefault();
+    console.log("car selected");
     const carId = this.car.Id;
 
     const carSelect = new CustomEvent("carselect", { detail: carId });
@@ -14,6 +15,7 @@ export default class CarTile extends LightningElement {
   }
 
   get isCarSelected() {
+    console.log("this.car.Id: " + this.car.Id);
     if (this.car.Id === this.carSelectedId) {
       return "tile selected";
     }
