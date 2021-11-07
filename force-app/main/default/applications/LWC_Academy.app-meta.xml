@@ -14,5 +14,4 @@
     <tabs>LWC_Udemy</tabs>
     <tabs>Udemy_LDS</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>LWC_Academy_UtilityBar</utilityBar>
 </CustomApplication>
