@@ -20,7 +20,7 @@
 		"scope": "html,javascript,typescript",
 		"prefix": "linkjs",
 		"body": [
-			"<script type=\"module\" defer src=\"$file.js\"></script>"
+			"<script type=\"module\" defer src=\"$controller.js\"></script>"
 		],
 		"description": "add JS file to HTML"
 	},
