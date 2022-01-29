@@ -1,5 +1,4 @@
 {
-  "trailingComma": "none",
   "overrides": [
     {
       "files": "**/lwc/**/*.html",
@@ -9,5 +8,7 @@
       "files": "*.{cmp,page,component}",
       "options": { "parser": "html" }
     }
-  ]
+  ],
+  "singleQuote": true,
+  "trailingComma": "all"
 }

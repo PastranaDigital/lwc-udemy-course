@@ -1,16 +1,16 @@
-import { LightningElement, api } from "lwc";
-import { createRecord } from "lightning/uiRecordApi";
-import { ShowToastEvent } from "lightning/platformShowToastEvent";
-import NAME_FIELD from "@salesforce/schema/Car_Experience__c.Name";
-import EXPERIENCE_FIELD from "@salesforce/schema/Car_Experience__c.Experience__c";
-import CAR_FIELD from "@salesforce/schema/Car_Experience__c.Car__c";
-import EXPERIENCE_OBJECT from "@salesforce/schema/Car_Experience__c";
+import { LightningElement, api } from 'lwc';
+import { createRecord } from 'lightning/uiRecordApi';
+import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import NAME_FIELD from '@salesforce/schema/Car_Experience__c.Name';
+import EXPERIENCE_FIELD from '@salesforce/schema/Car_Experience__c.Experience__c';
+import CAR_FIELD from '@salesforce/schema/Car_Experience__c.Car__c';
+import EXPERIENCE_OBJECT from '@salesforce/schema/Car_Experience__c';
 
 export default class AddCarExperience extends LightningElement {
   @api carId;
 
-  expTitle = "";
-  expDescription = "";
+  expTitle = '';
+  expDescription = '';
 
   handleTitleChange(event) {
     this.expTitle = event.target.value;
@@ -31,10 +31,12 @@ export default class AddCarExperience extends LightningElement {
     // need object, fields
     createRecord(recordInput)
       .then((carExperience) => {
-        this.showToast("SUCCESS", "Experience Record Updated", "success");
+        this.showToast('SUCCESS', 'Experience Record Updated', 'success');
+        const recordAdded = new CustomEvent('experienceadded');
+        this.dispatchEvent(recordAdded);
       })
       .catch((error) => {
-        this.showToast("ERROR", error.body.message, "error");
+        this.showToast('ERROR', error.body.message, 'error');
       });
   }
 
@@ -42,7 +44,7 @@ export default class AddCarExperience extends LightningElement {
     const evt = new ShowToastEvent({
       title: title,
       message: message,
-      variant: variant
+      variant: variant,
     });
     this.dispatchEvent(evt);
   }
