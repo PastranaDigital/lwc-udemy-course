@@ -1,0 +1,46 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 04-04-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   04-03-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <template if:true={carFound}>
+    <div class="container">
+      <lightning-layout multiple-rows>
+        <lightning-layout-item size="12">
+          <lightning-tabset active-tab-value={selectedTabValue}>
+            <lightning-tab
+              label="Car Details"
+              value="cardetailstab"
+              onactive={tabChangeHandler}
+            >
+              <c-car-detail car={car}></c-car-detail>
+            </lightning-tab>
+            <lightning-tab
+              label="Add Car Experience"
+              value="addexperience"
+              onactive={tabChangeHandler}
+            >
+              <c-add-car-experience
+                car-id={carId}
+                onexperienceadded={experienceAddedHandler}
+              ></c-add-car-experience>
+            </lightning-tab>
+            <lightning-tab
+              label="View Experiences"
+              value="viewexperiences"
+              onactive={tabChangeHandler}
+            >
+              <c-car-experiences car-id={carId}></c-car-experiences>
+            </lightning-tab>
+          </lightning-tabset>
+        </lightning-layout-item>
+      </lightning-layout>
+    </div>
+  </template>
+</template>

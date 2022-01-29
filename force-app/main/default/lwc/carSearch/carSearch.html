@@ -1,0 +1,23 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 04-03-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   04-02-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <div class="slds-m-bottom_small">
+    <lightning-card title="Search For Your Car" icon-name="standard:search">
+      <c-car-search-form
+        oncartypeselect={carTypeSelectHandler}
+      ></c-car-search-form>
+    </lightning-card>
+  </div>
+  <div class="slds-m-vertical_small"></div>
+  <lightning-card title="Search Results" icon-name="custom:custom31">
+    <c-car-search-result car-type-id={carTypeId}></c-car-search-result>
+  </lightning-card>
+</template>

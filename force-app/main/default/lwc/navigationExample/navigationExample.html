@@ -1,0 +1,56 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 03-29-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   03-29-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-card title="Navigation Example" icon-name="custom:custom68">
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Open Google"
+        onclick={openWebsite}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Account Home"
+        onclick={openAccountHome}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Create New Contact"
+        onclick={createNewContact}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Opportunity List View"
+        onclick={openOppListView}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Open Case Record"
+        onclick={openCaseRecord}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="LWC Udemy Tab"
+        onclick={openLWCUdemyTab}
+      ></lightning-button>
+    </div>
+    <div class="slds-p-around_medium" align="center">
+      <lightning-button
+        label="Preview A File"
+        onclick={previewFile}
+      ></lightning-button>
+    </div>
+  </lightning-card>
+</template>

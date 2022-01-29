@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : Omar Pastrana
+  @group             : 
+  @last modified on  : 03-29-2021
+  @last modified by  : Omar Pastrana
+  Modifications Log 
+  Ver   Date         Author          Modification
+  1.0   03-27-2021   Omar Pastrana   Initial Version
+-->
+<template>
+  <lightning-card title="Custom Record Form" icon-name="standard:custom">
+    <div class="slds-p-around_medium">
+      <lightning-record-form
+        object-api-name={objectApiName}
+        record-id={recordId}
+        columns="2"
+        mode="edit"
+        layout-type="Full"
+        onsuccess={successHandler}
+      ></lightning-record-form>
+    </div>
+  </lightning-card>
+</template>
