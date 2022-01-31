@@ -2,7 +2,7 @@
 <Profile xmlns="http://soap.sforce.com/2006/04/metadata">
     <applicationVisibilities>
         <application>LWC_Academy</application>
-        <default>false</default>
+        <default>true</default>
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
@@ -10,9 +10,217 @@
         <default>false</default>
         <visible>true</visible>
     </applicationVisibilities>
+    <applicationVisibilities>
+        <application>Udemy</application>
+        <default>false</default>
+        <visible>true</visible>
+    </applicationVisibilities>
+    <classAccesses>
+        <apexClass>AccountListLwcController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountManager</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>AccountManagerImperative</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarExperience</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarExperienceTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarSearchFormController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarSearchFormControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarSearchResultController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CarSearchResultControllerTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CreateData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>CreateDataTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DeleteData</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>DeleteDataTest</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>FeatureWall</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Organization</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OrganizationMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OrganizationMapperAccount</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>OrganizationMapperFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Person</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonDetailsController</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonMapper</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonMapperContact</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonMapperFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonMapperUser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonService</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonServiceContact</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonServiceFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonServiceModel</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>PersonServiceUser</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>RentACarTestFactory</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
     <custom>false</custom>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car_Experience__c.Car__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car_Experience__c.Experience__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Available_For_Rent__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Car_Type__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Description__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Geolocation__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Mileage__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>Car__c.Picture__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Car_Experience__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Car_Type__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <objectPermissions>
+        <allowCreate>true</allowCreate>
+        <allowDelete>true</allowDelete>
+        <allowEdit>true</allowEdit>
+        <allowRead>true</allowRead>
+        <modifyAllRecords>true</modifyAllRecords>
+        <object>Car__c</object>
+        <viewAllRecords>true</viewAllRecords>
+    </objectPermissions>
+    <tabVisibilities>
+        <tab>Car_Experience__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Car_Type__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Car__c</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
     <tabVisibilities>
         <tab>LWC_Udemy</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>Rent_A_Car</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <tabVisibilities>
@@ -20,6 +228,10 @@
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>AIViewInsightObjects</name>
+    </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
         <name>ActivateContract</name>
@@ -342,10 +554,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageClearbitIntegration</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>ManageContentPermissions</name>
     </userPermissions>
     <userPermissions>
@@ -383,6 +591,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ManageEmailClientConfig</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ManageEntitlements</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -502,10 +714,6 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
-        <name>ManageZapierIntegration</name>
-    </userPermissions>
-    <userPermissions>
-        <enabled>true</enabled>
         <name>MassInlineEdit</name>
     </userPermissions>
     <userPermissions>
@@ -531,6 +739,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>NewReportBuilder</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>OmnichannelInventorySync</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
@@ -638,6 +850,10 @@
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>
+        <name>UseOmnichannelInventoryAPIs</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
         <name>UseTeamReassignWizards</name>
     </userPermissions>
     <userPermissions>
@@ -667,6 +883,10 @@
     <userPermissions>
         <enabled>true</enabled>
         <name>ViewDataLeakageEvents</name>
+    </userPermissions>
+    <userPermissions>
+        <enabled>true</enabled>
+        <name>ViewDeveloperName</name>
     </userPermissions>
     <userPermissions>
         <enabled>true</enabled>

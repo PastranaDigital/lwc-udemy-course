@@ -41,12 +41,11 @@ export default class CarDetails extends LightningElement {
   }
 
   connectedCallback() {
-    console.log('Version 1');
     registerListener('carselect', this.callBackMethod, this);
   }
 
   callBackMethod(payload) {
-    this.carId = payload;
+    this.carId = payload.Id;
   }
 
   disconnectedCallback() {
