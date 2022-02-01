@@ -4,6 +4,8 @@ export default class VaccineSlotFinder extends LightningElement {
   centers = [];
   dates = [];
 
+  //? example Pincodes 110001 or 110088
+
   pincodeChangeHandler(e) {
     const pinCode = e.target.value;
     const isEnterKey = e.keyCode === 13;
