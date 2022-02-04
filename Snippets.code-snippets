@@ -104,7 +104,9 @@
 		"prefix": "licard",
 		"body": [
 			"<lightning-card title=\"$1\" icon-name=\"${2:standard:account}\">",
-			"    <p slot=\"footer\">$3</p>",
+			"    <div class=\"slds-p-around_medium\">$4",
+			"    </div>",
+			"    <!-- <p slot=\"footer\"></p> -->",
 			"</lightning-card>$0"
 		],
 		"description": "LWC Basic Card"
@@ -120,6 +122,41 @@
 			"</lightning-layout>"
 		],
 		"description": "LWC Basic Layout + Items"
+	},
+
+	"LWC Input": {
+		"scope": "html",
+		"prefix": "liinput",
+		"body": [
+			"<lightning-input ",
+			"    label=\"${1:Name}\" ",
+			"    type=\"${2|text, checkbox, checkbox-button, color, date, datetime, time, email, file, password, range, search, tel, url, number, toggle|}\" ",
+			"    placeholder=\"$3\" ",
+			"    class=\"slds-p-left_medium slds-p-vertical_small\" ",
+			"    field-level-help=\"$4\" ",
+			"    required",
+			"></lightning-input>$0"
+		],
+		"description": "LWC Basic Input"
+	},
+
+	"LWC Combobox": {
+		"scope": "html",
+		"prefix": "licombobox",
+		"body": [
+			"<lightning-combobox ",
+			"    label=\"${1:Label}\" ",
+			"    name=\"$1\" ",
+			"    placeholder=\"${2:Select an Option}\" ",
+			"    class=\"slds-p-left_medium slds-p-vertical_small\" ",
+			"    field-level-help=\"\" ",
+			"    value={$4} ",
+			"    options={$5} ",
+			"    onchange={${6:handle$1Change}} ",
+			"    required",
+			"></lightning-combobox>$0"
+		],
+		"description": "LWC Basic Combobox"
 	},
 
 	"LWC Button": {
@@ -139,7 +176,7 @@
 
 	"LWC Iterate": {
 		"scope": "html",
-		"prefix": "temp",
+		"prefix": "temp liiter",
 		"body": ["<template for:each={$1} for:item=\"$2\">", "    $0", "</template>"],
 		"description": "LWC Template Iteration of Array"
 	}
