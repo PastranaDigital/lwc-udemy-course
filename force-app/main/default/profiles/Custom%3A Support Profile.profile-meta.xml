@@ -176,6 +176,9 @@
         <field>Car__c.Picture__c</field>
         <readable>false</readable>
     </fieldPermissions>
+    <layoutAssignments>
+        <layout>Contact-Contact Layout</layout>
+    </layoutAssignments>
     <tabVisibilities>
         <tab>Car_Experience__c</tab>
         <visibility>Hidden</visibility>
@@ -198,6 +201,10 @@
     </tabVisibilities>
     <tabVisibilities>
         <tab>Udemy_LDS</tab>
+        <visibility>DefaultOn</visibility>
+    </tabVisibilities>
+    <tabVisibilities>
+        <tab>VSF</tab>
         <visibility>DefaultOn</visibility>
     </tabVisibilities>
     <userLicense>Salesforce</userLicense>

@@ -13,6 +13,7 @@
     <navType>Standard</navType>
     <tabs>LWC_Udemy</tabs>
     <tabs>Udemy_LDS</tabs>
+    <tabs>VSF</tabs>
     <tabs>Rent_A_Car</tabs>
     <tabs>Car__c</tabs>
     <tabs>Car_Type__c</tabs>

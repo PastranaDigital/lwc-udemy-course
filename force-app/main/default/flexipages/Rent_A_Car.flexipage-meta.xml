@@ -7,8 +7,8 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-            	<componentName>carSearch</componentName>
-			</componentInstance>
+                <componentName>carSearch</componentName>
+            </componentInstance>
         </itemInstances>
         <name>region2</name>
         <type>Region</type>
@@ -16,13 +16,13 @@
     <flexiPageRegions>
         <itemInstances>
             <componentInstance>
-            	<componentName>carDetails</componentName>
-			</componentInstance>
+                <componentName>carDetails</componentName>
+            </componentInstance>
         </itemInstances>
         <itemInstances>
             <componentInstance>
-            	<componentName>carLocation</componentName>
-			</componentInstance>
+                <componentName>carLocation</componentName>
+            </componentInstance>
         </itemInstances>
         <name>region3</name>
         <type>Region</type>

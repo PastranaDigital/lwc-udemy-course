@@ -1,0 +1,63 @@
+<template>
+  <lightning-card title="Create a New Case" icon-name="standard:case">
+    <div class="slds-p-around_medium">
+      <lightning-layout multiple-rows>
+        <!-- max width for a row = 12 -->
+        <lightning-layout-item size="6">
+          <lightning-input
+            label="Contact Name"
+            type="search"
+            placeholder="Search Contacts..."
+            class="slds-p-right_medium slds-p-vertical_small"
+            field-level-help="The event name must 50 characters or less"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+          <lightning-input
+            label="Contact Name"
+            type="search"
+            placeholder="Search Contacts..."
+            class="slds-p-left_medium slds-p-vertical_small"
+            field-level-help="The event name must 50 characters or less"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+          <lightning-input
+            label="Contact Name"
+            type="search"
+            placeholder="Search Contacts..."
+            class="slds-p-right_medium slds-p-vertical_small"
+            field-level-help="The event name must 50 characters or less"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+          <lightning-input
+            label="Contact Name"
+            type="search"
+            placeholder="Search Contacts..."
+            class="slds-p-left_medium slds-p-vertical_small"
+            field-level-help="The event name must 50 characters or less"
+            required
+          ></lightning-input>
+        </lightning-layout-item>
+        <lightning-layout-item size="6">
+          <lightning-combobox
+            label="Status"
+            name="Status"
+            placeholder="Select an Option"
+            class="slds-p-right_medium slds-p-vertical_small"
+            field-level-help=""
+            value={value2}
+            options={options}
+            onchange={handleStatusChange}
+            required
+          ></lightning-combobox>
+        </lightning-layout-item>
+      </lightning-layout>
+      <!-- <p>Selected value is: {value}</p> -->
+    </div>
+  </lightning-card>
+</template>
